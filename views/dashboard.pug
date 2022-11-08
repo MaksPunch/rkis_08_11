@@ -1,0 +1,35 @@
+extends layout.pug
+
+block title
+    <title>#{title}</title>
+
+block content
+    div(class='todo_list')
+        div(class='todo_switches')
+            h1 Closed Tasks
+            h1(class='active') TODO List 
+            h1 Add a Task
+        div(class='todo_container')
+            div(class='todo_header_container')
+                h2(class='todo_header') Tasks
+                div(class='sort_btn')
+                    p Сортировать по меткам
+                    img(src='/static/sort.png' alt='sort')
+            div.todo_content_container
+                div.task_container
+                    div.task_priority
+                    div.task_block
+                        div.task_header
+                            p #{task_1_header}
+                            p #{task_1_worker}
+                        div.task_addition_info_container
+                            div.task_text_prioirity
+                                p #{task_1_priority}
+                            div.task_addition_info
+                                p #{task_1_info}
+                            div.task_deadline
+                                p #{task_1_dl}
+                    div.task_expand
+                div.task_btns
+                    input(type='button').close_task_btn
+                    input(type='button').delete_task_btn
